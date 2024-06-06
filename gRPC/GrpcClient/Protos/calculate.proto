@@ -1,0 +1,22 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcClient";
+
+package calculate;
+
+service Calculator {
+	rpc Work (WorkRequest) returns (WorkResponse);
+}
+
+message WorkRequest {
+	int32 a = 1;
+	int32 b = 2;
+	string operation = 3;
+}
+
+message WorkResponse {
+	oneof response {
+		int32 result = 1;
+		string error = 2;
+	}
+}

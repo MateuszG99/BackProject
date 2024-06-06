@@ -1,0 +1,17 @@
+curl -X GET "https://localhost:7254/api/Categories/GetAll" -H "Authorization: Bearer (token)"
+curl -X GET "https://localhost:7254/api/Categories/GetById?id=1" -H "accept: application/json" -H "Authorization: Bearer (token)"
+curl -X POST "https://localhost:7254/api/Categories/Create" -H "Content-Type: application/json" -H "Authorization: Bearer (token)" -d "{\"categoryId\": \"1\", \"categoryName\": \"Obuwniczy\"}"
+curl -X PUT "https://localhost:7254/api/Categories/Update/1" -H "Content-Type: application/json" -H "Authorization: Bearer (token)" -d "{\"categoryId\": \"1\", \"categoryName\": \"Spożywczy\"}"
+curl -X DELETE "https://localhost:7254/api/Categories/Delete/1" -H "Authorization: Bearer (token)"
+
+curl -X GET "https://localhost:7254/api/Owners/GetAll" -H "accept: application/json" -H "Authorization: Bearer (token)"
+curl -X GET "https://localhost:7254/api/Owners/GetById?id=1" -H "accept: application/json" -H "Authorization: Bearer (token)"
+curl -X POST "https://localhost:7254/api/Owners/Create" -H "Content-Type: application/json" -H "Authorization: Bearer (token)" -d "{\"ownerId\": \"1\", \"firstname\": \"Jan\", \"surname\": \"Kowalski\"}"
+curl -X PUT "https://localhost:7254/api/Owners/Update/1" -H "Content-Type: application/json" -H "Authorization: Bearer (token)" -d "{\"ownerId\": \"1\", \"firstname\": \"Maurycy\", \"surname\": \"Braniewski\"}"
+curl -X DELETE "https://localhost:7254/api/Owners/Delete/1" -H "Authorization: Bearer (token)"
+
+curl -X GET "https://localhost:7254/api/Shops/GetAll" -H "accept: application/json" -H "Authorization: Bearer (token)"
+curl -X GET "https://localhost:7254/api/Shops/GetById?id=1" -H "accept: application/json" -H "Authorization: Bearer (token)"
+curl -X POST "https://localhost:7254/api/Shops/Create" -H "Content-Type: application/json" -H "Authorization: Bearer (token)" -d "{\"shopId\": \"1\", \"shopName\": \"CCC\", \"shopAddress\": \"Kwiatowa 2\", \"ownerId\": \"1\", \"categoryId\": \"1\"}"
+curl -X PUT "https://localhost:7254/api/Shops/Update/1" -H "Content-Type: application/json" -H "Authorization: Bearer (token)" -d "{\"shopId\": \"1\", \"shopName\": \"Lidl\", \"shopAddress\": \"Leśna 4\", \"ownerId\": \"1\", \"categoryId\": \"1\"}"
+curl -X DELETE "https://localhost:7254/api/Shops/Delete/1" -H "Authorization: Bearer (token)"

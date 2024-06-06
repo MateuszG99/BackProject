@@ -1,0 +1,13 @@
+## W skórcie:
+- Clean Architecture REST: API podzielone na 4 standardowe warstwy.
+- 3 Powiązane encje - Shop ma dokładnie jednego Owner i dokładnie jedną Category
+- CRUD - wszystkie standardowe operace zrealizowane - endpointy w odpowiednich kontrolerach
+- Middleware z Http - Stworzona prosta warstwa która wrzuca do logów ostrzeżenie jeżeli użytkownik nie jest autoryzowany (logi w konsoli)
+- Uwierzytelnianie JWT - Wytworzenie tokena zaimplementowano w serwisie w wartwie Persistence, obsługa w warstwie Presentation
+- EF InMemory - jest (w Persistence, podstawa apki)
+- Swagger - implementacja wzięta z materiałów z labów
+- Configuration - informacje niezbędna dla wygenerowania i obsługi JWT pobierane są z pliku konfiguracyjnego
+- Testy jednostkowe - testy jednostkowe kontrolerów dla wszystkich endpointów
+- Razor Pages - prosta implementacja panelu administratora z 3 dodatkowymi stronami (Zaloguj, Zarejestruj i Wynik). W systemie są dwie Role: Moderator i Administrator. Uprawnienia są takie same, z tym że Moderator nie może usuwać encji.
+- plik .txt z komentadmi curl - po jednej na endpoint.
+- SOAP/gRPC/GraphQL wraz z Klientem - Kalulator w formie aplikacji desktopowej (Klient). Aplikacja wysyła zapytanie do Serwisu przez gRPC i zwraca wynik obliczenia lub błąd zależnie od danych wejściowych.
